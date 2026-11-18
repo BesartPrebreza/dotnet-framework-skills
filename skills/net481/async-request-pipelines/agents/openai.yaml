@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Async Request Pipelines",
+    "short_description": ".NET Framework 4.8.1 Async Request Pipelines guidance",
+    "default_prompt": "Use $async-request-pipelines to review and implement this change."
+  }
+}

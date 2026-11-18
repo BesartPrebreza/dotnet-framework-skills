@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Bounded Retries",
+    "short_description": ".NET Framework 4.8.1 Bounded Retries guidance",
+    "default_prompt": "Use $bounded-retries to review and implement this change."
+  }
+}

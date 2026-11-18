@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Audit Logging",
+    "short_description": ".NET Framework 4.8 Audit Logging guidance",
+    "default_prompt": "Use $audit-logging to review and implement this change."
+  }
+}

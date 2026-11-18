@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Framework Testing",
+    "short_description": ".NET Framework 4.8.1 Framework Testing guidance",
+    "default_prompt": "Use $framework-testing to review and implement this change."
+  }
+}

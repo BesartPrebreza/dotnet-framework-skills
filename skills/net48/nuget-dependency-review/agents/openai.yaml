@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Nuget Dependency Review",
+    "short_description": ".NET Framework 4.8 Nuget Dependency Review guidance",
+    "default_prompt": "Use $nuget-dependency-review to review and implement this change."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Ef6 Migrations",
+    "short_description": ".NET Framework 4.8.1 Ef6 Migrations guidance",
+    "default_prompt": "Use $ef6-migrations to review and implement this change."
+  }
+}

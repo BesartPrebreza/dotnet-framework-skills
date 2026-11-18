@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Sql Server Query Review",
+    "short_description": ".NET Framework 4.8 Sql Server Query Review guidance",
+    "default_prompt": "Use $sql-server-query-review to review and implement this change."
+  }
+}

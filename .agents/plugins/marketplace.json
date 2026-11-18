@@ -1,0 +1,32 @@
+{
+  "name": "dotnet-framework-skills",
+  "interface": {
+    "displayName": ".NET Framework Skills"
+  },
+  "plugins": [
+    {
+      "name": "dotnet-framework-net48-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/dotnet-framework-net48-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "dotnet-framework-net481-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/dotnet-framework-net481-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

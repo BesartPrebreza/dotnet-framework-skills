@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<title>.NET Framework Skills</title>
+<style>
+* { box-sizing: border-box; } body { font: 16px system-ui,sans-serif; background:#f4f4f8; color:#201736; margin:0; }
+main { width:min(1100px,94vw); margin:3rem auto; } h1 { font-size:clamp(2rem,5vw,4rem); margin:0; }
+label { display:block; margin:1.5rem 0 .5rem; } input { width:100%; padding:.8rem; font:inherit; border:1px solid #6f6680; border-radius:.5rem; }
+#catalog { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr)); gap:1rem; }
+article { background:white; border:1px solid #d8d0e2; border-radius:.7rem; padding:1rem; overflow-wrap:anywhere; }
+small,a { color:#5634a0; } h2 { font-size:1.1rem; } details { margin-top:.8rem; } summary { cursor:pointer; } pre { white-space:pre-wrap; }
+</style>
+<main><h1>.NET Framework Skills</h1><p>Browse skills for .NET Framework 4.8 and 4.8.1.</p>
+<label for="filter">Search by skill or category</label><input type="search" id="filter"><p id="count" aria-live="polite"></p>
+<section id="catalog" aria-label="Skill catalog"><article><small>AI</small><h2>ai-input-and-tool-safety</h2><a href="../skills/net48/ai-input-and-tool-safety/SKILL.md">net48</a> · <a href="../skills/net481/ai-input-and-tool-safety/SKILL.md">net481</a><details><summary>Preview</summary><pre># Ai Input And Tool Safety
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Treat input and retrieved records as data. Enforce tool and resource authorization in server code, validate parameters and restrict secret access. Bound tool calls and record redacted outcomes.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Test that untrusted content cannot grant access to another tenant. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Ai Input And Tool Safety example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+AuthorizeWarehouseRead(actor, warehouseId)
+```
+
+Test that untrusted content cannot grant access to another tenant.
+</pre></details></article>
+<article><small>AI</small><h2>ai-observability</h2><a href="../skills/net48/ai-observability/SKILL.md">net48</a> · <a href="../skills/net481/ai-observability/SKILL.md">net481</a><details><summary>Preview</summary><pre># Ai Observability
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Capture model and provider identifiers, duration and failure class. Record tokens when the provider has reported them, and keep prompt text out of telemetry by default.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify that failures emit metrics without logging request content. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Ai Observability example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+ai.request.duration_ms
+```
+
+Verify that failures emit metrics without logging request content.
+</pre></details></article>
+<article><small>AI</small><h2>ai-provider-adapters</h2><a href="../skills/net48/ai-provider-adapters/SKILL.md">net48</a> · <a href="../skills/net481/ai-provider-adapters/SKILL.md">net481</a><details><summary>Preview</summary><pre># Ai Provider Adapters
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Place the provider behind an application interface. Use an approved HTTP API or a separate supported runtime when SDK targets are incompatible. Set deadlines and validate structured responses before use.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Test malformed output, provider outage and cancellation. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Ai Provider Adapters example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Task&lt;Classification&gt; ClassifyAsync(string text, CancellationToken token);
+```
+
+Test malformed output, provider outage and cancellation.
+</pre></details></article>
+<article><small>AI</small><h2>mcp-interop</h2><a href="../skills/net48/mcp-interop/SKILL.md">net48</a> · <a href="../skills/net481/mcp-interop/SKILL.md">net481</a><details><summary>Preview</summary><pre># Mcp Interop
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Verify the MCP SDK target framework. Put the server in a supported sidecar runtime when needed and keep Framework integration behind a narrow authenticated API. Define tool schemas and server-side resource checks.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Contract-test authorized reads and denied cross-tenant requests. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Mcp Interop example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+get_warehouse_stock(warehouseId)
+```
+
+Contract-test authorized reads and denied cross-tenant requests.
+</pre></details></article>
+<article><small>API</small><h2>api-versioning</h2><a href="../skills/net48/api-versioning/SKILL.md">net48</a> · <a href="../skills/net481/api-versioning/SKILL.md">net481</a><details><summary>Preview</summary><pre># Api Versioning
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Preserve existing route matches and introduce explicit version routes. Test old clients, disambiguate controller resolution and document deprecation and migration paths.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Run both versions with the same resource and verify their contracts independently. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Api Versioning example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+[Route(&quot;api/v2/warehouses/{id:int}&quot;)]
+```
+
+Run both versions with the same resource and verify their contracts independently.
+</pre></details></article>
+<article><small>API</small><h2>hypermedia-links</h2><a href="../skills/net48/hypermedia-links/SKILL.md">net48</a> · <a href="../skills/net481/hypermedia-links/SKILL.md">net481</a><details><summary>Preview</summary><pre># Hypermedia Links
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Use named Web API routes and build links using the configured route helper. Respect reverse-proxy host rules and caller access before exposing action links.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify links resolve behind the deployed virtual directory. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Hypermedia Links example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Url.Link(&quot;WarehouseById&quot;, new { id = warehouseId })
+```
+
+Verify links resolve behind the deployed virtual directory.
+</pre></details></article>
+<article><small>API</small><h2>idempotency-patterns</h2><a href="../skills/net48/idempotency-patterns/SKILL.md">net48</a> · <a href="../skills/net481/idempotency-patterns/SKILL.md">net481</a><details><summary>Preview</summary><pre># Idempotency Patterns
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Scope keys by caller and operation, persist request hashes, and atomically commit business writes with the replayable response. Use a database uniqueness constraint for races.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Send two concurrent requests and assert one business effect. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Idempotency Patterns example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+UNIQUE (CallerId, OperationName, RequestKey)
+```
+
+Send two concurrent requests and assert one business effect.
+</pre></details></article>
+<article><small>API</small><h2>openapi-contracts</h2><a href="../skills/net48/openapi-contracts/SKILL.md">net48</a> · <a href="../skills/net481/openapi-contracts/SKILL.md">net481</a><details><summary>Preview</summary><pre># Openapi Contracts
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Treat the contract as a versioned artifact. Confirm generator compatibility with the consumer TFM and serializer. Diff operation IDs, required fields and nullable behavior before regeneration.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Regenerate twice and check for a clean second diff. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Openapi Contracts example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+operationId: GetWarehouseStock
+```
+
+Regenerate twice and check for a clean second diff.
+</pre></details></article>
+<article><small>API</small><h2>problem-details-rfc9457</h2><a href="../skills/net48/problem-details-rfc9457/SKILL.md">net48</a> · <a href="../skills/net481/problem-details-rfc9457/SKILL.md">net481</a><details><summary>Preview</summary><pre># Problem Details Rfc9457
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Map application failures centrally through the configured Web API 2 error pipeline. Emit application/problem+json with a matching HTTP status and safe detail. Keep the established error contract where consumers rely on it.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify validation, authorization and unexpected server errors separately. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Problem Details Rfc9457 example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Content-Type: application/problem+json
+```
+
+Verify validation, authorization and unexpected server errors separately.
+</pre></details></article>
+<article><small>API</small><h2>web-api-2-conventions</h2><a href="../skills/net48/web-api-2-conventions/SKILL.md">net48</a> · <a href="../skills/net481/web-api-2-conventions/SKILL.md">net481</a><details><summary>Preview</summary><pre># Web Api 2 Conventions
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Use Web API 2 ApiController conventions and preserve existing routes. Validate ModelState, bind DTOs and return 201 with a resolvable Location if a resource is created.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Assert response status, media type and Location. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Web Api 2 Conventions example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+if (!ModelState.IsValid) return BadRequest(ModelState);
+```
+
+Assert response status, media type and Location.
+</pre></details></article>
+<article><small>Architecture</small><h2>domain-driven-design</h2><a href="../skills/net48/domain-driven-design/SKILL.md">net48</a> · <a href="../skills/net481/domain-driven-design/SKILL.md">net481</a><details><summary>Preview</summary><pre># Domain Driven Design
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Make invariants explicit inside aggregate operations. Store persistence mapping in EF6 configuration, and write external messages through a durable outbox inside the same database transaction.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Test allocation above remaining stock and confirm state is preserved. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Domain Driven Design example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+stock.Allocate(quantity)
+```
+
+Test allocation above remaining stock and confirm state is preserved.
+</pre></details></article>
+<article><small>Architecture</small><h2>layered-architecture</h2><a href="../skills/net48/layered-architecture/SKILL.md">net48</a> · <a href="../skills/net481/layered-architecture/SKILL.md">net481</a><details><summary>Preview</summary><pre># Layered Architecture
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Inspect existing project references. Keep transport and UI adapters thin and preserve application transaction ownership. Return DTOs from boundaries and keep data access queryable inside the persistence layer.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Confirm UI and API adapters share the application use case. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Layered Architecture example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+StockResponse GetStock(int warehouseId)
+```
+
+Confirm UI and API adapters share the application use case.
+</pre></details></article>
+<article><small>Architecture</small><h2>modular-monolith</h2><a href="../skills/net48/modular-monolith/SKILL.md">net48</a> · <a href="../skills/net481/modular-monolith/SKILL.md">net481</a><details><summary>Preview</summary><pre># Modular Monolith
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Expose contracts at module boundaries and restrict direct access to module data. Add assembly dependency checks and document ownership of shared transactions.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify Order code does not depend on Inventory.Persistence. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Modular Monolith example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Inventory.Contracts
+```
+
+Verify Order code does not depend on Inventory.Persistence.
+</pre></details></article>
+<article><small>Architecture</small><h2>msbuild-solutions</h2><a href="../skills/net48/msbuild-solutions/SKILL.md">net48</a> · <a href="../skills/net481/msbuild-solutions/SKILL.md">net481</a><details><summary>Preview</summary><pre># Msbuild Solutions
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Inspect old-style project imports and explicit Compile items. Keep dependency direction acyclic. Review Directory.Build.props import behavior and whether each project uses packages.config or PackageReference.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Build the solution from a clean checkout and inspect the resolved references. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Msbuild Solutions example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+&lt;TargetFrameworkVersion&gt;v4.8&lt;/TargetFrameworkVersion&gt;
+```
+
+Build the solution from a clean checkout and inspect the resolved references.
+</pre></details></article>
+<article><small>Architecture</small><h2>multi-tenancy</h2><a href="../skills/net48/multi-tenancy/SKILL.md">net48</a> · <a href="../skills/net481/multi-tenancy/SKILL.md">net481</a><details><summary>Preview</summary><pre># Multi Tenancy
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Resolve tenant identity from trusted authorization context. Apply tenant scope to EF6, raw SQL, cache keys, workers and exports. Include tenant identity in unique keys where ownership requires it.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Test two tenants with overlapping local IDs in reads, writes and exports. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Multi Tenancy example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Where(x =&gt; x.TenantId == tenantId)
+```
+
+Test two tenants with overlapping local IDs in reads, writes and exports.
+</pre></details></article>
+<article><small>Architecture</small><h2>ports-and-adapters</h2><a href="../skills/net48/ports-and-adapters/SKILL.md">net48</a> · <a href="../skills/net481/ports-and-adapters/SKILL.md">net481</a><details><summary>Preview</summary><pre># Ports And Adapters
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Define ports in the application assembly for external dependencies. Implement adapters at the edge. Compose concrete dependencies in the host and keep infrastructure references outward.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Build the application project independently of host assemblies. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Ports And Adapters example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+IStockReadPort stockReader
+```
+
+Build the application project independently of host assemblies.
+</pre></details></article>
+<article><small>C#</small><h2>csharp-nullability</h2><a href="../skills/net48/csharp-nullability/SKILL.md">net48</a> · <a href="../skills/net481/csharp-nullability/SKILL.md">net481</a><details><summary>Preview</summary><pre># Csharp Nullability
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Read LangVersion and compiler settings. For C# 7.3-compatible code use explicit guards and materialize nullable values safely. Introduce nullable reference annotations only when the project compiler and tooling support them.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Test omitted JSON fields, database nulls and empty collections. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Csharp Nullability example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+if (request == null) throw new ArgumentNullException(nameof(request));
+```
+
+Test omitted JSON fields, database nulls and empty collections.
+</pre></details></article>
+<article><small>Configuration</small><h2>framework-configuration</h2><a href="../skills/net48/framework-configuration/SKILL.md">net48</a> · <a href="../skills/net481/framework-configuration/SKILL.md">net481</a><details><summary>Preview</summary><pre># Framework Configuration
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Read settings once at startup and parse with invariant culture. Validate required keys before initializing dependent services. Use host-provided secret storage and explicit transform checks.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Reject zero, negative and malformed timeout values. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Framework Configuration example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+ConfigurationManager.AppSettings[&quot;TimeoutSeconds&quot;]
+```
+
+Reject zero, negative and malformed timeout values.
+</pre></details></article>
+<article><small>Data</small><h2>ef6-data-access</h2><a href="../skills/net48/ef6-data-access/SKILL.md">net48</a> · <a href="../skills/net481/ef6-data-access/SKILL.md">net481</a><details><summary>Preview</summary><pre># Ef6 Data Access
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Use the existing EF6 mapping approach and keep DbContext per unit of work. Project read-only queries before materialization. Handle optimistic concurrency with a configured token and explicit conflict policy.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Inspect generated SQL for server-side predicates and stable ordering. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Ef6 Data Access example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+query.AsNoTracking().Select(x =&gt; new StockRow { Quantity = x.Quantity })
+```
+
+Inspect generated SQL for server-side predicates and stable ordering.
+</pre></details></article>
+<article><small>Data</small><h2>ef6-migrations</h2><a href="../skills/net48/ef6-migrations/SKILL.md">net48</a> · <a href="../skills/net481/ef6-migrations/SKILL.md">net481</a><details><summary>Preview</summary><pre># Ef6 Migrations
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Confirm EF6 migration ownership and baseline. Stage changes that affect existing rows, backfill in bounded batches and review generated scripts in deployment order.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Apply the script to a restored database and verify persisted data. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Ef6 Migrations example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Update-Database -Script -SourceMigration:Previous -TargetMigration:Next
+```
+
+Apply the script to a restored database and verify persisted data.
+</pre></details></article>
+<article><small>Data</small><h2>ef6-transactions</h2><a href="../skills/net48/ef6-transactions/SKILL.md">net48</a> · <a href="../skills/net481/ef6-transactions/SKILL.md">net481</a><details><summary>Preview</summary><pre># Ef6 Transactions
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Use a short DbContextTransaction when one context owns multiple writes. Enable async flow explicitly with TransactionScope where required. Review retry and distributed transaction behavior against the configured provider.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Force the second write to fail and verify atomic rollback. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Ef6 Transactions example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+using (var transaction = db.Database.BeginTransaction()) { db.SaveChanges(); transaction.Commit(); }
+```
+
+Force the second write to fail and verify atomic rollback.
+</pre></details></article>
+<article><small>Data</small><h2>redis-cache-aside</h2><a href="../skills/net48/redis-cache-aside/SKILL.md">net48</a> · <a href="../skills/net481/redis-cache-aside/SKILL.md">net481</a><details><summary>Preview</summary><pre># Redis Cache Aside
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Confirm package and TFM compatibility. Reuse the connection multiplexer, scope keys by environment and tenant, and add TTL with jitter. Invalidate after database commit.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify stale cache behavior when invalidation or Redis connectivity fails. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Redis Cache Aside example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+inventory:v1:tenant-42:warehouse-3
+```
+
+Verify stale cache behavior when invalidation or Redis connectivity fails.
+</pre></details></article>
+<article><small>Data</small><h2>sql-server-query-review</h2><a href="../skills/net48/sql-server-query-review/SKILL.md">net48</a> · <a href="../skills/net481/sql-server-query-review/SKILL.md">net481</a><details><summary>Preview</summary><pre># Sql Server Query Review
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Define row grain and join cardinality before optimizing. Parameterize filters, compare result shape and totals, then measure the actual plan and logical reads on representative data.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Check warehouse coverage and totals before and after the change. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Sql Server Query Review example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+SET STATISTICS IO, TIME ON;
+```
+
+Check warehouse coverage and totals before and after the change.
+</pre></details></article>
+<article><small>Deployment</small><h2>framework-target-upgrade</h2><a href="../skills/net48/framework-target-upgrade/SKILL.md">net48</a> · <a href="../skills/net481/framework-target-upgrade/SKILL.md">net481</a><details><summary>Preview</summary><pre># Framework Target Upgrade
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Inventory OS support, project targets, vendor libraries, COM, TLS behavior and binding redirects. Upgrade in small steps and test each host, bitness and deployment transform.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Clean-install the package on a supported Windows test host. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Framework Target Upgrade example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+&lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.8&quot; /&gt;
+```
+
+Clean-install the package on a supported Windows test host.
+</pre></details></article>
+<article><small>Deployment</small><h2>iis-windows-deployment</h2><a href="../skills/net48/iis-windows-deployment/SKILL.md">net48</a> · <a href="../skills/net481/iis-windows-deployment/SKILL.md">net481</a><details><summary>Preview</summary><pre># Iis Windows Deployment
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Confirm Windows base image and host compatibility. Match app-pool bitness and identity, apply transforms per environment and sanity-check permissions. Stage health checks and validate rollback artifacts before rollout.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Test startup under the deployed service identity and configured virtual path. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Iis Windows Deployment example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Application Pool: .NET CLR v4.0, Integrated
+```
+
+Test startup under the deployed service identity and configured virtual path.
+</pre></details></article>
+<article><small>Desktop</small><h2>devexpress-xtrareports</h2><a href="../skills/net48/devexpress-xtrareports/SKILL.md">net48</a> · <a href="../skills/net481/devexpress-xtrareports/SKILL.md">net481</a><details><summary>Preview</summary><pre># Devexpress Xtrareports
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Inspect installed DevExpress assemblies and report units. Set custom page size, margins and orientation using available APIs. Validate the printable area against the driver and label stock.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Export one page and test a physical print on the target printer. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Devexpress Xtrareports example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+100 × 50 mm is approximately 394 × 197 hundredths of an inch.
+```
+
+Export one page and test a physical print on the target printer.
+</pre></details></article>
+<article><small>Desktop</small><h2>winforms-maintenance</h2><a href="../skills/net48/winforms-maintenance/SKILL.md">net48</a> · <a href="../skills/net481/winforms-maintenance/SKILL.md">net481</a><details><summary>Preview</summary><pre># Winforms Maintenance
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Respect designer partial classes and UI dispatcher requirements. Keep I/O out of UI event processing where practical, propagate cancellation on close and dispose bindings and subscriptions.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Close the form while data loads and check for disposed-control callbacks. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Winforms Maintenance example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+if (InvokeRequired) { BeginInvoke(updateUi); return; }
+```
+
+Close the form while data loads and check for disposed-control callbacks.
+</pre></details></article>
+<article><small>HTTP</small><h2>async-request-pipelines</h2><a href="../skills/net48/async-request-pipelines/SKILL.md">net48</a> · <a href="../skills/net481/async-request-pipelines/SKILL.md">net481</a><details><summary>Preview</summary><pre># Async Request Pipelines
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Propagate cancellation to I/O, return Task from async request actions and bound buffering. Keep System.Web request context requirements explicit at the controller boundary.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Test disconnected requests and bounded execution under load. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Async Request Pipelines example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+await query.ToListAsync(cancellationToken)
+```
+
+Test disconnected requests and bounded execution under load.
+</pre></details></article>
+<article><small>HTTP</small><h2>bounded-retries</h2><a href="../skills/net48/bounded-retries/SKILL.md">net48</a> · <a href="../skills/net481/bounded-retries/SKILL.md">net481</a><details><summary>Preview</summary><pre># Bounded Retries
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Follow the configured provider retry policy and classify failures. Use capped backoff and a total deadline. Require replay safety for retries crossing transaction boundaries.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Test exhausted retries and cancellation during delay. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Bounded Retries example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+await Task.Delay(backoff, cancellationToken)
+```
+
+Test exhausted retries and cancellation during delay.
+</pre></details></article>
+<article><small>HTTP</small><h2>http-client-adapters</h2><a href="../skills/net48/http-client-adapters/SKILL.md">net48</a> · <a href="../skills/net481/http-client-adapters/SKILL.md">net481</a><details><summary>Preview</summary><pre># Http Client Adapters
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Preserve configured proxy and TLS behavior. Manage HttpClient lifetime using an existing compatible factory or long-lived clients with reviewed connection behavior. Pass cancellation and dispose response objects.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Simulate timeouts and transient upstream responses. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Http Client Adapters example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+await client.GetAsync(relativeUri, cancellationToken)
+```
+
+Simulate timeouts and transient upstream responses.
+</pre></details></article>
+<article><small>HTTP</small><h2>iis-reverse-proxy</h2><a href="../skills/net48/iis-reverse-proxy/SKILL.md">net48</a> · <a href="../skills/net481/iis-reverse-proxy/SKILL.md">net481</a><details><summary>Preview</summary><pre># Iis Reverse Proxy
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Keep backend targets explicit, set bounded timeouts, and apply forwarded header trust at the proxy boundary. Scope retries to replay-safe traffic and validate health routes.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Check trusted proxy routing and client URL generation. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Iis Reverse Proxy example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Proxy timeout follows the upstream service budget.
+```
+
+Check trusted proxy routing and client URL generation.
+</pre></details></article>
+<article><small>Messaging</small><h2>durable-messaging</h2><a href="../skills/net48/durable-messaging/SKILL.md">net48</a> · <a href="../skills/net481/durable-messaging/SKILL.md">net481</a><details><summary>Preview</summary><pre># Durable Messaging
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Check client package compatibility, preserve message schema and acknowledge after durable effect. Deduplicate by message ID with a database uniqueness constraint. Bound retry delays and retain actionable dead letter metadata.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Redeliver after commit and verify the handler applies the effect once. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Durable Messaging example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+UNIQUE (ConsumerName, MessageId)
+```
+
+Redeliver after commit and verify the handler applies the effect once.
+</pre></details></article>
+<article><small>Operations</small><h2>iis-observability</h2><a href="../skills/net48/iis-observability/SKILL.md">net48</a> · <a href="../skills/net481/iis-observability/SKILL.md">net481</a><details><summary>Preview</summary><pre># Iis Observability
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Correlate structured application logs with IIS request data. Keep readiness responses bounded and omit sensitive diagnostics. Verify telemetry library compatibility and worker lifecycle behavior.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Simulate database unavailability and verify the application reports readiness correctly. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Iis Observability example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+GET /health/ready
+```
+
+Simulate database unavailability and verify the application reports readiness correctly.
+</pre></details></article>
+<article><small>Security</small><h2>audit-logging</h2><a href="../skills/net48/audit-logging/SKILL.md">net48</a> · <a href="../skills/net481/audit-logging/SKILL.md">net481</a><details><summary>Preview</summary><pre># Audit Logging
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Capture actor, action, resource, outcome and correlation ID. Exclude secrets and personal payloads. Use durable records when required by the operation and define failure behavior.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify failed and successful actions emit appropriately redacted events. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Audit Logging example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+AuditEvent(actorId, &quot;Stock.Adjusted&quot;, warehouseId, correlationId)
+```
+
+Verify failed and successful actions emit appropriately redacted events.
+</pre></details></article>
+<article><small>Security</small><h2>framework-security-review</h2><a href="../skills/net48/framework-security-review/SKILL.md">net48</a> · <a href="../skills/net481/framework-security-review/SKILL.md">net481</a><details><summary>Preview</summary><pre># Framework Security Review
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Trace inbound input to database, serialization and file boundaries. Review tenant and object permissions, MVC anti-forgery and IIS configuration. Record source locations and propose fixes with defensive regression checks.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify a protected state change rejects a request without a valid anti-forgery token. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Framework Security Review example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+[ValidateAntiForgeryToken]
+```
+
+Verify a protected state change rejects a request without a valid anti-forgery token.
+</pre></details></article>
+<article><small>Security</small><h2>nuget-dependency-review</h2><a href="../skills/net48/nuget-dependency-review/SKILL.md">net48</a> · <a href="../skills/net481/nuget-dependency-review/SKILL.md">net481</a><details><summary>Preview</summary><pre># Nuget Dependency Review
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Inventory direct and transitive dependencies using the restore method configured for each project. Verify trusted feeds and package provenance, and review binding redirects after updates.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Build from clean package caches with the approved feeds. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Nuget Dependency Review example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+nuget.exe restore Inventory.sln
+```
+
+Build from clean package caches with the approved feeds.
+</pre></details></article>
+<article><small>Security</small><h2>oauth-resource-server</h2><a href="../skills/net48/oauth-resource-server/SKILL.md">net48</a> · <a href="../skills/net481/oauth-resource-server/SKILL.md">net481</a><details><summary>Preview</summary><pre># Oauth Resource Server
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Check the provider metadata and token type. Map accepted scopes or roles deliberately and separate authenticated identity from permission to use a resource. Match existing challenges and status codes.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify anonymous, insufficient-scope and unauthorized-resource requests. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Oauth Resource Server example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Require a stock.read scope and warehouse membership.
+```
+
+Verify anonymous, insufficient-scope and unauthorized-resource requests.
+</pre></details></article>
+<article><small>Security</small><h2>owin-jwt-validation</h2><a href="../skills/net48/owin-jwt-validation/SKILL.md">net48</a> · <a href="../skills/net481/owin-jwt-validation/SKILL.md">net481</a><details><summary>Preview</summary><pre># Owin Jwt Validation
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Inspect existing authentication middleware and pipeline order. Validate issuer, audience, expiry and trusted signature keys. Keep resource authorization in the application boundary.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify wrong issuer, audience and expired tokens are rejected. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Owin Jwt Validation example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+ValidateIssuer = true
+```
+
+Verify wrong issuer, audience and expired tokens are rejected.
+</pre></details></article>
+<article><small>Security</small><h2>windows-incident-triage</h2><a href="../skills/net48/windows-incident-triage/SKILL.md">net48</a> · <a href="../skills/net481/windows-incident-triage/SKILL.md">net481</a><details><summary>Preview</summary><pre># Windows Incident Triage
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Establish scope and operating authority. Capture timestamps, application logs and approved Windows/IIS evidence. Keep changes under incident procedures and redact handoffs.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Reconcile the timeline and identify the evidence supporting each conclusion. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Windows Incident Triage example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Correlate UTC request timestamps with IIS and application event IDs.
+```
+
+Reconcile the timeline and identify the evidence supporting each conclusion.
+</pre></details></article>
+<article><small>Services</small><h2>wcf-soap-contracts</h2><a href="../skills/net48/wcf-soap-contracts/SKILL.md">net48</a> · <a href="../skills/net481/wcf-soap-contracts/SKILL.md">net481</a><details><summary>Preview</summary><pre># Wcf Soap Contracts
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Preserve operation names, namespaces, binding and published data member identities. Handle typed faults deliberately, and use an Abort fallback if a client Close fails.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Compare WSDL and run a legacy client contract test. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Wcf Soap Contracts example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+[OperationContract] StockResponse GetStock(int warehouseId);
+```
+
+Compare WSDL and run a legacy client contract test.
+</pre></details></article>
+<article><small>Testing</small><h2>browser-regression</h2><a href="../skills/net48/browser-regression/SKILL.md">net48</a> · <a href="../skills/net481/browser-regression/SKILL.md">net481</a><details><summary>Preview</summary><pre># Browser Regression
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Use a separate compatible browser test runner when necessary. Seed a test environment and exercise actual UI navigation. Record browser details, traces and assertions with secrets removed.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Repeat the journey after a clean test-data reset. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Browser Regression example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Verify filter selection survives a postback.
+```
+
+Repeat the journey after a clean test-data reset.
+</pre></details></article>
+<article><small>Testing</small><h2>framework-testing</h2><a href="../skills/net48/framework-testing/SKILL.md">net48</a> · <a href="../skills/net481/framework-testing/SKILL.md">net481</a><details><summary>Preview</summary><pre># Framework Testing
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Use the existing test runner on Windows. Unit-test domain behavior and exercise System.Web routes and SQL Server behavior at boundaries. Keep fixture data deterministic and isolate database state.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Run tests twice and verify they do not depend on execution order. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Framework Testing example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+vstest.console.exe Inventory.Tests.dll
+```
+
+Run tests twice and verify they do not depend on execution order.
+</pre></details></article>
+<article><small>Web</small><h2>aspnet-mvc5</h2><a href="../skills/net48/aspnet-mvc5/SKILL.md">net48</a> · <a href="../skills/net481/aspnet-mvc5/SKILL.md">net481</a><details><summary>Preview</summary><pre># Aspnet Mvc5
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Keep view models explicit, preserve route and validation conventions and use anti-forgery on cookie-authenticated form writes. Follow post-redirect-get after successful writes where appropriate.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify invalid submissions preserve user input and validation messages. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Aspnet Mvc5 example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+return RedirectToAction(&quot;Details&quot;, new { id });
+```
+
+Verify invalid submissions preserve user input and validation messages.
+</pre></details></article>
+<article><small>Web</small><h2>aspnet-web-forms</h2><a href="../skills/net48/aspnet-web-forms/SKILL.md">net48</a> · <a href="../skills/net481/aspnet-web-forms/SKILL.md">net481</a><details><summary>Preview</summary><pre># Aspnet Web Forms
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Respect page lifecycle ordering and recreate dynamic controls early with stable IDs. Rebind initial data on first load when state should survive postbacks.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify selection, validators and control events survive a postback. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Aspnet Web Forms example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+if (!IsPostBack) BindWarehouses();
+```
+
+Verify selection, validators and control events survive a postback.
+</pre></details></article>
+<article><small>Workers</small><h2>background-execution</h2><a href="../skills/net48/background-execution/SKILL.md">net48</a> · <a href="../skills/net481/background-execution/SKILL.md">net481</a><details><summary>Preview</summary><pre># Background Execution
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Use a durable queue for work that must survive IIS recycling. Use scoped cancellation and bounded worker concurrency. Give each worker iteration its own context and explicit exception handling.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Restart the worker between claim and completion and verify recovery. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Background Execution example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+await handler.ProcessAsync(job, stoppingToken)
+```
+
+Restart the worker between claim and completion and verify recovery.
+</pre></details></article>
+<article><small>Workers</small><h2>restartable-batch-imports</h2><a href="../skills/net48/restartable-batch-imports/SKILL.md">net48</a> · <a href="../skills/net481/restartable-batch-imports/SKILL.md">net481</a><details><summary>Preview</summary><pre># Restartable Batch Imports
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Stage rows with a stable source key. Validate before promotion and commit one bounded chunk with its checkpoint. Render row-level error reports and treat retries as a normal path.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Stop after a committed chunk and restart without duplicating records. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Restartable Batch Imports example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+UNIQUE (ImportId, SourceRowNumber)
+```
+
+Stop after a committed chunk and restart without duplicating records.
+</pre></details></article>
+<article><small>Workers</small><h2>scheduled-jobs</h2><a href="../skills/net48/scheduled-jobs/SKILL.md">net48</a> · <a href="../skills/net481/scheduled-jobs/SKILL.md">net481</a><details><summary>Preview</summary><pre># Scheduled Jobs
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Use an existing durable scheduler or Windows Task Scheduler. Track last processed cursor and prevent concurrent sweeps with a durable claim. Specify the time zone and DST policy.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify overlap, host restart and daylight-saving transitions. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Scheduled Jobs example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+JobKey = inventory-reconciliation
+```
+
+Verify overlap, host restart and daylight-saving transitions.
+</pre></details></article>
+<article><small>Workflows</small><h2>clr-diagnostics</h2><a href="../skills/net48/clr-diagnostics/SKILL.md">net48</a> · <a href="../skills/net481/clr-diagnostics/SKILL.md">net481</a><details><summary>Preview</summary><pre># Clr Diagnostics
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Capture a baseline and correlate counters with incident timestamps. Use scoped PerfView or ETW collection under host policy. Redact paths and customer data before sharing evidence.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Compare CPU, working set and elapsed time across samples. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Clr Diagnostics example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+Get-Process -Id 1234
+```
+
+Compare CPU, working set and elapsed time across samples.
+</pre></details></article>
+<article><small>Workflows</small><h2>framework-scaffolding</h2><a href="../skills/net48/framework-scaffolding/SKILL.md">net48</a> · <a href="../skills/net481/framework-scaffolding/SKILL.md">net481</a><details><summary>Preview</summary><pre># Framework Scaffolding
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Inspect installed Visual Studio workloads, targeting packs and supported operating systems. Pick desktop, System.Web, WCF or Windows Service hosting before generating project files. Restore, build and smoke-test the selected host.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Verify a clean checkout builds on Windows. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Framework Scaffolding example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+MSBuild.exe Inventory.sln /restore /p:RestorePackagesConfig=true
+```
+
+Verify a clean checkout builds on Windows.
+</pre></details></article>
+<article><small>Workflows</small><h2>framework-verification</h2><a href="../skills/net48/framework-verification/SKILL.md">net48</a> · <a href="../skills/net481/framework-verification/SKILL.md">net481</a><details><summary>Preview</summary><pre># Framework Verification
+
+1. Inspect the affected project, its host, current packages and integration boundaries. Confirm the effective target framework, C# compiler settings and Windows deployment baseline before changing dependencies.
+2. Read repository build commands and record SDK, MSBuild and targeting pack versions. Build changed configurations and run the test suite. Report commands, exit codes and gates that require another environment.
+3. Consult [the example](examples/pattern.md) for a pattern to adapt to the repository. Preserve existing callers and record any contract changes in the implementation summary.
+4. Confirm the Release build uses the expected target framework. Record the checks that ran and identify prerequisites for any outstanding checks.
+
+# Framework Verification example
+
+This fragment targets .NET Framework 4.8. Apply it within the existing project and verify the surrounding configuration.
+
+```text
+MSBuild.exe Inventory.sln /t:Rebuild /p:Configuration=Release
+```
+
+Confirm the Release build uses the expected target framework.
+</pre></details></article></section></main>
+<script>
+const input = document.querySelector('#filter');
+const cards = [...document.querySelectorAll('article')];
+function filter() {
+  const term = input.value.trim().toLowerCase();
+  for (const card of cards) card.hidden = !card.textContent.toLowerCase().includes(term);
+  document.querySelector('#count').textContent = cards.filter(card => !card.hidden).length + ' skills';
+}
+input.addEventListener('input', filter);
+filter();
+</script></html>

@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Ef6 Data Access",
+    "short_description": ".NET Framework 4.8.1 Ef6 Data Access guidance",
+    "default_prompt": "Use $ef6-data-access to review and implement this change."
+  }
+}

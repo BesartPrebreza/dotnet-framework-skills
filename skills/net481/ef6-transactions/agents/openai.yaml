@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Ef6 Transactions",
+    "short_description": ".NET Framework 4.8.1 Ef6 Transactions guidance",
+    "default_prompt": "Use $ef6-transactions to review and implement this change."
+  }
+}

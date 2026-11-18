@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Framework Target Upgrade",
+    "short_description": ".NET Framework 4.8.1 Framework Target Upgrade guidance",
+    "default_prompt": "Use $framework-target-upgrade to review and implement this change."
+  }
+}

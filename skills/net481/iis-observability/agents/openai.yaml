@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Iis Observability",
+    "short_description": ".NET Framework 4.8.1 Iis Observability guidance",
+    "default_prompt": "Use $iis-observability to review and implement this change."
+  }
+}

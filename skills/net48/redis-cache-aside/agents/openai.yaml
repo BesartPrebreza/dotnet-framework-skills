@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Redis Cache Aside",
+    "short_description": ".NET Framework 4.8 Redis Cache Aside guidance",
+    "default_prompt": "Use $redis-cache-aside to review and implement this change."
+  }
+}

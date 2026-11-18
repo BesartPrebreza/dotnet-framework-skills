@@ -1,0 +1,19 @@
+{
+  "name": "dotnet-framework-net48-skills",
+  "version": "0.1.0",
+  "description": "50 C# development skills for .NET Framework 4.8.",
+  "author": {
+    "name": "Besart Prebreza",
+    "url": "https://github.com/BesartPrebreza"
+  },
+  "homepage": "https://github.com/BesartPrebreza/dotnet-framework-skills",
+  "repository": "https://github.com/BesartPrebreza/dotnet-framework-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": ".NET Framework 4.8 Skills",
+    "shortDescription": "50 C# development skills for .NET Framework 4.8.",
+    "developerName": "Besart Prebreza",
+    "category": "Development"
+  }
+}

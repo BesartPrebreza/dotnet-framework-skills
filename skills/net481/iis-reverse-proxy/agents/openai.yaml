@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Iis Reverse Proxy",
+    "short_description": ".NET Framework 4.8.1 Iis Reverse Proxy guidance",
+    "default_prompt": "Use $iis-reverse-proxy to review and implement this change."
+  }
+}

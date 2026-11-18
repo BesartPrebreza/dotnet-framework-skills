@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Idempotency Patterns",
+    "short_description": ".NET Framework 4.8.1 Idempotency Patterns guidance",
+    "default_prompt": "Use $idempotency-patterns to review and implement this change."
+  }
+}

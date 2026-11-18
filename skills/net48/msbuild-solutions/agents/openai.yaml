@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Msbuild Solutions",
+    "short_description": ".NET Framework 4.8 Msbuild Solutions guidance",
+    "default_prompt": "Use $msbuild-solutions to review and implement this change."
+  }
+}

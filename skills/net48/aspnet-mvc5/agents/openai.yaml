@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Aspnet Mvc5",
+    "short_description": ".NET Framework 4.8 Aspnet Mvc5 guidance",
+    "default_prompt": "Use $aspnet-mvc5 to review and implement this change."
+  }
+}

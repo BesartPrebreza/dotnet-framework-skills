@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Devexpress Xtrareports",
+    "short_description": ".NET Framework 4.8.1 Devexpress Xtrareports guidance",
+    "default_prompt": "Use $devexpress-xtrareports to review and implement this change."
+  }
+}

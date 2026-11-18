@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Scheduled Jobs",
+    "short_description": ".NET Framework 4.8.1 Scheduled Jobs guidance",
+    "default_prompt": "Use $scheduled-jobs to review and implement this change."
+  }
+}

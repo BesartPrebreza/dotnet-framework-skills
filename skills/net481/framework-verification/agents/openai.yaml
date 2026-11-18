@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Framework Verification",
+    "short_description": ".NET Framework 4.8.1 Framework Verification guidance",
+    "default_prompt": "Use $framework-verification to review and implement this change."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Problem Details Rfc9457",
+    "short_description": ".NET Framework 4.8.1 Problem Details Rfc9457 guidance",
+    "default_prompt": "Use $problem-details-rfc9457 to review and implement this change."
+  }
+}

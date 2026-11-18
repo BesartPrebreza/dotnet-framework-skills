@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Restartable Batch Imports",
+    "short_description": ".NET Framework 4.8 Restartable Batch Imports guidance",
+    "default_prompt": "Use $restartable-batch-imports to review and implement this change."
+  }
+}

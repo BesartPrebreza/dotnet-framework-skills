@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Framework Scaffolding",
+    "short_description": ".NET Framework 4.8 Framework Scaffolding guidance",
+    "default_prompt": "Use $framework-scaffolding to review and implement this change."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Background Execution",
+    "short_description": ".NET Framework 4.8 Background Execution guidance",
+    "default_prompt": "Use $background-execution to review and implement this change."
+  }
+}

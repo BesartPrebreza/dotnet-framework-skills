@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Hypermedia Links",
+    "short_description": ".NET Framework 4.8 Hypermedia Links guidance",
+    "default_prompt": "Use $hypermedia-links to review and implement this change."
+  }
+}

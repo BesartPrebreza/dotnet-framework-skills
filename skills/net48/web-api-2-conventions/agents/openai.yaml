@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Web Api 2 Conventions",
+    "short_description": ".NET Framework 4.8 Web Api 2 Conventions guidance",
+    "default_prompt": "Use $web-api-2-conventions to review and implement this change."
+  }
+}

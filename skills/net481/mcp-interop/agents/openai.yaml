@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Mcp Interop",
+    "short_description": ".NET Framework 4.8.1 Mcp Interop guidance",
+    "default_prompt": "Use $mcp-interop to review and implement this change."
+  }
+}

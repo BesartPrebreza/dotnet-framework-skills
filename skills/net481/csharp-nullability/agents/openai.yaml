@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Csharp Nullability",
+    "short_description": ".NET Framework 4.8.1 Csharp Nullability guidance",
+    "default_prompt": "Use $csharp-nullability to review and implement this change."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Ai Observability",
+    "short_description": ".NET Framework 4.8 Ai Observability guidance",
+    "default_prompt": "Use $ai-observability to review and implement this change."
+  }
+}

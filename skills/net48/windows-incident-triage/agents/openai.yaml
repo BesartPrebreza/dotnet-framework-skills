@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Windows Incident Triage",
+    "short_description": ".NET Framework 4.8 Windows Incident Triage guidance",
+    "default_prompt": "Use $windows-incident-triage to review and implement this change."
+  }
+}

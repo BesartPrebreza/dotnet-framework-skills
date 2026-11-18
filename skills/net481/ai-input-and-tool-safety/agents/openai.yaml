@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Ai Input And Tool Safety",
+    "short_description": ".NET Framework 4.8.1 Ai Input And Tool Safety guidance",
+    "default_prompt": "Use $ai-input-and-tool-safety to review and implement this change."
+  }
+}

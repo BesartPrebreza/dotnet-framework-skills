@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Multi Tenancy",
+    "short_description": ".NET Framework 4.8 Multi Tenancy guidance",
+    "default_prompt": "Use $multi-tenancy to review and implement this change."
+  }
+}

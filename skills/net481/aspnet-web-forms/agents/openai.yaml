@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Aspnet Web Forms",
+    "short_description": ".NET Framework 4.8.1 Aspnet Web Forms guidance",
+    "default_prompt": "Use $aspnet-web-forms to review and implement this change."
+  }
+}

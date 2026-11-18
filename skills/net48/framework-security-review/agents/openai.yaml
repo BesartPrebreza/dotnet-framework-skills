@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Framework Security Review",
+    "short_description": ".NET Framework 4.8 Framework Security Review guidance",
+    "default_prompt": "Use $framework-security-review to review and implement this change."
+  }
+}

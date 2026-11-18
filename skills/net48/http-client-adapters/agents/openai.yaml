@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Http Client Adapters",
+    "short_description": ".NET Framework 4.8 Http Client Adapters guidance",
+    "default_prompt": "Use $http-client-adapters to review and implement this change."
+  }
+}

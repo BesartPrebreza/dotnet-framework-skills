@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Durable Messaging",
+    "short_description": ".NET Framework 4.8 Durable Messaging guidance",
+    "default_prompt": "Use $durable-messaging to review and implement this change."
+  }
+}

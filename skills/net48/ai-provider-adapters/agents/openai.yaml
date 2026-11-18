@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Ai Provider Adapters",
+    "short_description": ".NET Framework 4.8 Ai Provider Adapters guidance",
+    "default_prompt": "Use $ai-provider-adapters to review and implement this change."
+  }
+}

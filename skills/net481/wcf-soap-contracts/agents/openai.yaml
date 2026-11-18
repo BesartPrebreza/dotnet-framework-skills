@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Wcf Soap Contracts",
+    "short_description": ".NET Framework 4.8.1 Wcf Soap Contracts guidance",
+    "default_prompt": "Use $wcf-soap-contracts to review and implement this change."
+  }
+}

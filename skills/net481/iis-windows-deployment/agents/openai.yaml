@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Iis Windows Deployment",
+    "short_description": ".NET Framework 4.8.1 Iis Windows Deployment guidance",
+    "default_prompt": "Use $iis-windows-deployment to review and implement this change."
+  }
+}

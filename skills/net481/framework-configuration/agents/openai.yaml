@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Framework Configuration",
+    "short_description": ".NET Framework 4.8.1 Framework Configuration guidance",
+    "default_prompt": "Use $framework-configuration to review and implement this change."
+  }
+}

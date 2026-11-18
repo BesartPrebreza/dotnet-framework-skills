@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Browser Regression",
+    "short_description": ".NET Framework 4.8 Browser Regression guidance",
+    "default_prompt": "Use $browser-regression to review and implement this change."
+  }
+}

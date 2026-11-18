@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Clr Diagnostics",
+    "short_description": ".NET Framework 4.8 Clr Diagnostics guidance",
+    "default_prompt": "Use $clr-diagnostics to review and implement this change."
+  }
+}

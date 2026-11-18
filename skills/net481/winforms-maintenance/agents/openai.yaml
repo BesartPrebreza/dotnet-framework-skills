@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Winforms Maintenance",
+    "short_description": ".NET Framework 4.8.1 Winforms Maintenance guidance",
+    "default_prompt": "Use $winforms-maintenance to review and implement this change."
+  }
+}

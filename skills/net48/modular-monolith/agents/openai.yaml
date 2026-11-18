@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Modular Monolith",
+    "short_description": ".NET Framework 4.8 Modular Monolith guidance",
+    "default_prompt": "Use $modular-monolith to review and implement this change."
+  }
+}

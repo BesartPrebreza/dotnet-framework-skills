@@ -1,0 +1,502 @@
+[
+  {
+    "skill": "framework-configuration",
+    "category": "Configuration",
+    "spring_skill": "configuration-properties",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Reject zero, negative and malformed timeout values."
+  },
+  {
+    "skill": "framework-scaffolding",
+    "category": "Workflows",
+    "spring_skill": "spring-boot-scaffolding",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify a clean checkout builds on Windows."
+  },
+  {
+    "skill": "framework-verification",
+    "category": "Workflows",
+    "spring_skill": "spring-boot-verification",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Confirm the Release build uses the expected target framework."
+  },
+  {
+    "skill": "clr-diagnostics",
+    "category": "Workflows",
+    "spring_skill": "jvm-diagnostics",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Compare CPU, working set and elapsed time across samples."
+  },
+  {
+    "skill": "layered-architecture",
+    "category": "Architecture",
+    "spring_skill": "layered-architecture",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Confirm UI and API adapters share the application use case."
+  },
+  {
+    "skill": "ports-and-adapters",
+    "category": "Architecture",
+    "spring_skill": "hexagonal-architecture",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Build the application project independently of host assemblies."
+  },
+  {
+    "skill": "domain-driven-design",
+    "category": "Architecture",
+    "spring_skill": "domain-driven-design",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Test allocation above remaining stock and confirm state is preserved."
+  },
+  {
+    "skill": "msbuild-solutions",
+    "category": "Architecture",
+    "spring_skill": "multi-module-maven",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Build the solution from a clean checkout and inspect the resolved references."
+  },
+  {
+    "skill": "modular-monolith",
+    "category": "Architecture",
+    "spring_skill": "spring-modulith",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify Order code does not depend on Inventory.Persistence."
+  },
+  {
+    "skill": "multi-tenancy",
+    "category": "Architecture",
+    "spring_skill": "multi-tenancy",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Test two tenants with overlapping local IDs in reads, writes and exports."
+  },
+  {
+    "skill": "web-api-2-conventions",
+    "category": "API",
+    "spring_skill": "rest-api-conventions",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Assert response status, media type and Location."
+  },
+  {
+    "skill": "openapi-contracts",
+    "category": "API",
+    "spring_skill": "openapi-first",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Regenerate twice and check for a clean second diff."
+  },
+  {
+    "skill": "problem-details-rfc9457",
+    "category": "API",
+    "spring_skill": "problem-details-rfc9457",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify validation, authorization and unexpected server errors separately."
+  },
+  {
+    "skill": "idempotency-patterns",
+    "category": "API",
+    "spring_skill": "idempotency-patterns",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Send two concurrent requests and assert one business effect."
+  },
+  {
+    "skill": "hypermedia-links",
+    "category": "API",
+    "spring_skill": "hateoas",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify links resolve behind the deployed virtual directory."
+  },
+  {
+    "skill": "iis-reverse-proxy",
+    "category": "HTTP",
+    "spring_skill": "spring-cloud-gateway",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Check trusted proxy routing and client URL generation."
+  },
+  {
+    "skill": "async-request-pipelines",
+    "category": "HTTP",
+    "spring_skill": "webflux-reactive-patterns",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Test disconnected requests and bounded execution under load."
+  },
+  {
+    "skill": "ef6-data-access",
+    "category": "Data",
+    "spring_skill": "spring-data-jpa",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Inspect generated SQL for server-side predicates and stable ordering."
+  },
+  {
+    "skill": "ef6-migrations",
+    "category": "Data",
+    "spring_skill": "flyway-migrations",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Apply the script to a restored database and verify persisted data."
+  },
+  {
+    "skill": "redis-cache-aside",
+    "category": "Data",
+    "spring_skill": "spring-data-redis",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify stale cache behavior when invalidation or Redis connectivity fails."
+  },
+  {
+    "skill": "ef6-transactions",
+    "category": "Data",
+    "spring_skill": "transactional-patterns",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Force the second write to fail and verify atomic rollback."
+  },
+  {
+    "skill": "durable-messaging",
+    "category": "Messaging",
+    "spring_skill": "event-driven-messaging",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Redeliver after commit and verify the handler applies the effect once."
+  },
+  {
+    "skill": "scheduled-jobs",
+    "category": "Workers",
+    "spring_skill": "scheduled-tasks",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify overlap, host restart and daylight-saving transitions."
+  },
+  {
+    "skill": "background-execution",
+    "category": "Workers",
+    "spring_skill": "async-execution",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Restart the worker between claim and completion and verify recovery."
+  },
+  {
+    "skill": "restartable-batch-imports",
+    "category": "Workers",
+    "spring_skill": "spring-batch",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Stop after a committed chunk and restart without duplicating records."
+  },
+  {
+    "skill": "framework-target-upgrade",
+    "category": "Deployment",
+    "spring_skill": "spring-boot-migration",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Clean-install the package on a supported Windows test host."
+  },
+  {
+    "skill": "iis-windows-deployment",
+    "category": "Deployment",
+    "spring_skill": "container-native-deployment",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Test startup under the deployed service identity and configured virtual path."
+  },
+  {
+    "skill": "api-versioning",
+    "category": "API",
+    "spring_skill": "api-versioning",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Run both versions with the same resource and verify their contracts independently."
+  },
+  {
+    "skill": "http-client-adapters",
+    "category": "HTTP",
+    "spring_skill": "http-interface-clients",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Simulate timeouts and transient upstream responses."
+  },
+  {
+    "skill": "csharp-nullability",
+    "category": "C#",
+    "spring_skill": "null-safety",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Test omitted JSON fields, database nulls and empty collections."
+  },
+  {
+    "skill": "bounded-retries",
+    "category": "HTTP",
+    "spring_skill": "resilience-retry",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Test exhausted retries and cancellation during delay."
+  },
+  {
+    "skill": "owin-jwt-validation",
+    "category": "Security",
+    "spring_skill": "spring-security-jwt",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify wrong issuer, audience and expired tokens are rejected."
+  },
+  {
+    "skill": "oauth-resource-server",
+    "category": "Security",
+    "spring_skill": "oauth2-resource-server",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify anonymous, insufficient-scope and unauthorized-resource requests."
+  },
+  {
+    "skill": "framework-security-review",
+    "category": "Security",
+    "spring_skill": "spring-security-review",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify a protected state change rejects a request without a valid anti-forgery token."
+  },
+  {
+    "skill": "nuget-dependency-review",
+    "category": "Security",
+    "spring_skill": "java-supply-chain-security",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Build from clean package caches with the approved feeds."
+  },
+  {
+    "skill": "audit-logging",
+    "category": "Security",
+    "spring_skill": "security-audit-logging",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify failed and successful actions emit appropriately redacted events."
+  },
+  {
+    "skill": "windows-incident-triage",
+    "category": "Security",
+    "spring_skill": "spring-incident-response",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Reconcile the timeline and identify the evidence supporting each conclusion."
+  },
+  {
+    "skill": "ai-provider-adapters",
+    "category": "AI",
+    "spring_skill": "spring-ai-integration",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Test malformed output, provider outage and cancellation."
+  },
+  {
+    "skill": "ai-input-and-tool-safety",
+    "category": "AI",
+    "spring_skill": "spring-ai-security",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Test that untrusted content cannot grant access to another tenant."
+  },
+  {
+    "skill": "mcp-interop",
+    "category": "AI",
+    "spring_skill": "mcp-server",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Contract-test authorized reads and denied cross-tenant requests."
+  },
+  {
+    "skill": "ai-observability",
+    "category": "AI",
+    "spring_skill": "ai-observability",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify that failures emit metrics without logging request content."
+  },
+  {
+    "skill": "iis-observability",
+    "category": "Operations",
+    "spring_skill": "production-observability",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Simulate database unavailability and verify the application reports readiness correctly."
+  },
+  {
+    "skill": "framework-testing",
+    "category": "Testing",
+    "spring_skill": "testing-pyramid",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Run tests twice and verify they do not depend on execution order."
+  },
+  {
+    "skill": "browser-regression",
+    "category": "Testing",
+    "spring_skill": "agent-qa-browser-regression",
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Repeat the journey after a clean test-data reset."
+  },
+  {
+    "skill": "winforms-maintenance",
+    "category": "Desktop",
+    "spring_skill": null,
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Close the form while data loads and check for disposed-control callbacks."
+  },
+  {
+    "skill": "devexpress-xtrareports",
+    "category": "Desktop",
+    "spring_skill": null,
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Export one page and test a physical print on the target printer."
+  },
+  {
+    "skill": "wcf-soap-contracts",
+    "category": "Services",
+    "spring_skill": null,
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Compare WSDL and run a legacy client contract test."
+  },
+  {
+    "skill": "sql-server-query-review",
+    "category": "Data",
+    "spring_skill": null,
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Check warehouse coverage and totals before and after the change."
+  },
+  {
+    "skill": "aspnet-mvc5",
+    "category": "Web",
+    "spring_skill": null,
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify invalid submissions preserve user input and validation messages."
+  },
+  {
+    "skill": "aspnet-web-forms",
+    "category": "Web",
+    "spring_skill": null,
+    "targets": [
+      "net48",
+      "net481"
+    ],
+    "check": "Verify selection, validators and control events survive a postback."
+  }
+]

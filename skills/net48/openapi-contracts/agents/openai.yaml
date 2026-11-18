@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Openapi Contracts",
+    "short_description": ".NET Framework 4.8 Openapi Contracts guidance",
+    "default_prompt": "Use $openapi-contracts to review and implement this change."
+  }
+}

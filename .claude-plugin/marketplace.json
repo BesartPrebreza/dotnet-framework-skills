@@ -1,0 +1,37 @@
+{
+  "name": "dotnet-framework-skills",
+  "owner": {
+    "name": "Besart Prebreza",
+    "url": "https://github.com/BesartPrebreza"
+  },
+  "plugins": [
+    {
+      "name": "dotnet-framework-net48-skills",
+      "description": "50 C# development skills for .NET Framework 4.8.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/net48/"
+      ],
+      "category": "development",
+      "tags": [
+        "dotnet-framework",
+        "csharp"
+      ]
+    },
+    {
+      "name": "dotnet-framework-net481-skills",
+      "description": "50 C# development skills for .NET Framework 4.8.1.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/net481/"
+      ],
+      "category": "development",
+      "tags": [
+        "dotnet-framework",
+        "csharp"
+      ]
+    }
+  ]
+}

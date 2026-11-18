@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Owin Jwt Validation",
+    "short_description": ".NET Framework 4.8.1 Owin Jwt Validation guidance",
+    "default_prompt": "Use $owin-jwt-validation to review and implement this change."
+  }
+}

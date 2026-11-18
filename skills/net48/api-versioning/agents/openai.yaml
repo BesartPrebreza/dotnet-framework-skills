@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Api Versioning",
+    "short_description": ".NET Framework 4.8 Api Versioning guidance",
+    "default_prompt": "Use $api-versioning to review and implement this change."
+  }
+}

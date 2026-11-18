@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Layered Architecture",
+    "short_description": ".NET Framework 4.8.1 Layered Architecture guidance",
+    "default_prompt": "Use $layered-architecture to review and implement this change."
+  }
+}

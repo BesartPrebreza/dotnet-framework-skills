@@ -1,0 +1,7 @@
+{
+  "interface": {
+    "display_name": "Ports And Adapters",
+    "short_description": ".NET Framework 4.8 Ports And Adapters guidance",
+    "default_prompt": "Use $ports-and-adapters to review and implement this change."
+  }
+}
